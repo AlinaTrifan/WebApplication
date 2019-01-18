@@ -1,0 +1,65 @@
+﻿@model IEnumerable<WebApplicationHomeWork.Models.Dog>
+
+@{
+    ViewData["Title"] = "DogList";
+}
+
+<h2>DogList</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DogName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DogGender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DogFurColor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NickName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfBirth)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DogName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DogGender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DogFurColor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NickName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfBirth)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
