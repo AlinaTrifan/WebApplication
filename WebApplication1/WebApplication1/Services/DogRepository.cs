@@ -10,7 +10,7 @@ namespace WebApplication1.Services
     {
         private static List<Dog> dogs = new List<Dog>();
         private static DogRepository instance;
-
+       
         public DogRepository()
         {
 
@@ -39,7 +39,8 @@ namespace WebApplication1.Services
                 DogFurColor = FurColor.White,
                 NickName = "Azo",
                 DateOfBirth = DateTime.Now,
-                //owner = new Owner("Alex", "alex@gmail.com")
+                OwnerName = "Alex",
+                OwnerEmail = "alex@gmail.com"
                 
             });
             dogs.Add(new Dog()
@@ -48,7 +49,9 @@ namespace WebApplication1.Services
                 DogGender = Gender.Male,
                 DogFurColor = FurColor.Yellow,
                 NickName = "Rexulet",
-                DateOfBirth = new DateTime(2016, 11, 14)
+                DateOfBirth = new DateTime(2016, 11, 14),
+                OwnerName = "Marian",
+                OwnerEmail = "marian@gmail.com"
             });
             dogs.Add(new Dog()
             {
@@ -56,7 +59,9 @@ namespace WebApplication1.Services
                 DogGender = Gender.Female,
                 DogFurColor = FurColor.Black,
                 NickName = "Paturica",
-                DateOfBirth = new DateTime(2017, 01, 04)
+                DateOfBirth = new DateTime(2017, 01, 04),
+                OwnerName = "Adriana",
+                OwnerEmail = "adriana@gmail.com"
             });
             return dogs;
         }

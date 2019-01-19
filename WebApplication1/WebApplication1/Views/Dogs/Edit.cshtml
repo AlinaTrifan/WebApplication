@@ -13,9 +13,9 @@
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                
+
                 <input asp-for="Id" type="hidden" />
-                
+
             </div>
             <div class="form-group">
                 <label asp-for="DogName" class="control-label"></label>
@@ -41,6 +41,16 @@
                 <label asp-for="DateOfBirth" class="control-label"></label>
                 <input asp-for="DateOfBirth" class="form-control" />
                 <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="owner.OwnerName" class="control-label"></label>
+                <input asp-for="owner.OwnerName" class="form-control" />
+                <span asp-validation-for="owner.OwnerName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="owner.OwnerEmail" class="control-label"></label>
+                <input asp-for="owner.OwnerEmail" class="form-control" />
+                <span asp-validation-for="owner.OwnerEmail" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-default" />

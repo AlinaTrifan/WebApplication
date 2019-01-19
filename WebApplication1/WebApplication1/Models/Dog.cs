@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WebApplicationHomeWork.Models
 {
-    public class Dog
+    public class Dog : Owner
     {
         public int Id { get; set; }
         [Required]
@@ -21,7 +21,7 @@ namespace WebApplicationHomeWork.Models
         [Required]
         public DateTime DateOfBirth { get; set; }
         [Required]
-        public Owner owner;
+        public Owner owner = new Owner();
     }
 
     public class Owner
@@ -32,11 +32,7 @@ namespace WebApplicationHomeWork.Models
         [EmailAddress]
         public string OwnerEmail { get; set; }
 
-        public Owner(string ownerName, string ownerEmail)
-        {
-            this.OwnerEmail = ownerEmail;
-            this.OwnerName = ownerName;
-        }
+       
     }
 
     public enum Gender { Female, Male }
